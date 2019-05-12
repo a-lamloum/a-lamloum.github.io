@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>VMK-mer</title>
+		<link rel="icon" href="images/logo.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="">
+							<!-- <span class="icon fa-diamond"></span> -->
+						</div>
+						<!--
+						<img src="team/images/Untitled-1.png" class="img logo_1">
+						-->
+						<div class="content">
+							<div class="inner">
+								<h1>VMK-mer</h1>
+								<p><a href="https://github.com/ubakry/VMK-mer"> VMK-mer</a> is Standalone tool that converts mutations in VCF file into <br /> the k-mer sequences that were affected by these mutations.<br /></p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Intro</a></li>
+								<li><a href="#work">Manual</a></li>
+								<li><a href="team/team.html">Team</a></li>
+								<li><a href="#Updates">Updates</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+						
+
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="intro">
+								<h2 class="major">Intro</h2>
+								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<p>A new approach for genome-wide association studies (GWAS) relies of sequencing data instead of microarrays. In this approach, some tools build their association studies based on k-mers frequency that change between healthy and diseased individuals. Instead of counting the k-mers throughout the whole genome, we are building a tools that generates k-mers, of any size, only around the sites of mutations, whether SNPs or indels. This will reduce the required computational power needed for such GWAS studies. Moreover, the output can be used for other disease-networks studies.</p>
+								<h2 class="major">Aim</h2>
+								<p>
+									Create a tool that converts VCF file mutations to list of k-mers. For each mutation in the VCF file, it should find the k-mers that got affected by this specific mutation. It should be able to handle SNPs, insertions, deletions, and multiple mutations at the same locus. Finally, the tool should be easy-to-use with multiple options for output file format, output directory, and k-mer length.
+								</p>
+							</article>
+
+						<!-- Manual -->
+							<article id="work">
+								<h2 class="major">Manual</h2>
+								<span class="image main"><img src="images/vmkmer-workflow.jpg" alt="" /></span>
+								<p>This tools was built with Python and requires the installation of the following two Python libraries: <a href="https://pandas.pydata.org/"> pandas </a> and <a href="https://pysam.readthedocs.io/en/latest/installation.html"> pysam </a>.</p>
+								<p> <b> Main arguments </b> <br/>
+									The following are the required arguments to run VMK-mer:<br />
+									 <ul>
+								         <li><code> -f < fasta_file >:</code> input fasta file. It should be the same reference used for variant calling.</li>
+								         <li><code>-v < vcf_file >:</code> input VCF file. VMK-mer should handle all VCF formats till v.4.3.</li>
+								         <li><code>-k < int >:</code> the k-mer size used of the mutated k-mers.</p></li>	
+      								</ul>
+      								<p> <b> Optional arguments </b> <br/>
+									The following are extra arguments that can be used with VMK-mer:<br />
+									 <ul>
+								         <li><code> -o < path > :</code> Output file path (directory). default is the current working directory.</li>
+								         <li><code>--outfmt < TSV|XML >:</code> specifies the output file format (TSV or XML). The default mode will keep both files.</li>
+								         <li><code>--outfile < str >: </code>The basename of the output file; i.e. without extention - default: vmkmer-results.</p></li>
+								         <li><code>-h|--help: </code>show the help message (manual) of the tool and exit.</p></li>
+								         <li><code>--version:</code>show program's version number and exit.</p></li>
+      								</ul>
+
+							</article>
+						<!-- Contact -->
+							<article id="Updates">
+								<h2 class="major">Updates</h2>
+								<p>
+									this section is not completed yet.<br>
+									you can check for update in our github repo <a href="https://github.com/ubakry/VMK-mer"> VMK-mer </a>
+								</p>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; VMK-mer team. Edited_by: <a href="https://github.com/a-lamloum">Ahmed Omar</a>.</p>
+						<p class="copyright">Design:<a href="https://html5up.net/"> HTML5 UP.</a></p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -30,7 +30,16 @@
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/main.css">
-	<script src="https://cdn.gravitec.net/storage/abd48616f831886128ad75a756f274f2/client.js" async></script>
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" defer></script>
+	<script>
+	  window.OneSignal = window.OneSignal || [];
+	  OneSignal.push(function() {
+	    OneSignal.init({
+	      appId: "67b172a1-0a37-4045-8d84-988b637f05e3",
+	    });
+	  });
+	</script>
+<!-- 	<script src="https://cdn.gravitec.net/storage/abd48616f831886128ad75a756f274f2/client.js" async></script> -->
 </head>
 
 <body>
